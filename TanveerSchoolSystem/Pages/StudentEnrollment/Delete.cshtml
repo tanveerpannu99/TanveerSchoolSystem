@@ -1,0 +1,46 @@
+﻿@page
+@model TanveerSchoolSystem.Pages.StudentEnrollment.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StudentEnrollment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.EnrollmentDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.EnrollmentDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.EnrollmentId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.EnrollmentId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.Course)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.Course.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.Student)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.Student.Id)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="StudentEnrollment.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

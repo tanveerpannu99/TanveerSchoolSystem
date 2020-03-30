@@ -1,0 +1,43 @@
+﻿@page
+@model TanveerSchoolSystem.Pages.StudentEnrollment.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentEnrollment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.EnrollmentDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.EnrollmentDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.EnrollmentId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.EnrollmentId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.Course)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.Course.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEnrollment.Student)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEnrollment.Student.FirstName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.StudentEnrollment.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
